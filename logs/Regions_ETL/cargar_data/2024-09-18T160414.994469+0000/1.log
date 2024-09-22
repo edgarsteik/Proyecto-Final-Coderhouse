@@ -1,0 +1,35 @@
+[2024-09-18 16:04:40,806] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Regions_ETL.cargar_data manual__2024-09-18T16:04:14.994469+00:00 [queued]>
+[2024-09-18 16:04:40,844] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Regions_ETL.cargar_data manual__2024-09-18T16:04:14.994469+00:00 [queued]>
+[2024-09-18 16:04:40,845] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-18 16:04:40,845] {taskinstance.py:1239} INFO - Starting attempt 1 of 6
+[2024-09-18 16:04:40,846] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-18 16:04:40,883] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): cargar_data> on 2024-09-18 16:04:14.994469+00:00
+[2024-09-18 16:04:40,892] {standard_task_runner.py:52} INFO - Started process 277 to run task
+[2024-09-18 16:04:40,899] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'Regions_ETL', 'cargar_data', 'manual__2024-09-18T16:04:14.994469+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Regions.py', '--cfg-path', '/tmp/tmportca76v', '--error-file', '/tmp/tmp8te9oy43']
+[2024-09-18 16:04:40,901] {standard_task_runner.py:77} INFO - Job 8: Subtask cargar_data
+[2024-09-18 16:04:41,048] {logging_mixin.py:109} INFO - Running <TaskInstance: Regions_ETL.cargar_data manual__2024-09-18T16:04:14.994469+00:00 [running]> on host b9afb08ecd2d
+[2024-09-18 16:04:41,148] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-09-18 16:04:41,228] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=steikedgar99_coderhouse
+AIRFLOW_CTX_DAG_ID=Regions_ETL
+AIRFLOW_CTX_TASK_ID=cargar_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-09-18T16:04:14.994469+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-09-18T16:04:14.994469+00:00
+[2024-09-18 16:04:41,231] {logging_mixin.py:109} INFO - Cargando la data para la fecha: 2024-09-18 16
+[2024-09-18 16:04:41,308] {logging_mixin.py:109} INFO - (250, 9)
+[2024-09-18 16:04:41,373] {logging_mixin.py:109} INFO -             Name  population  ...  timezones                    ETL_TIME
+0  South Georgia          30  ...  UTC-02:00  2024-09-18 16:04:31.456465
+1        Grenada      112519  ...  UTC-04:00  2024-09-18 16:04:31.456465
+2    Switzerland     8654622  ...  UTC+01:00  2024-09-18 16:04:31.456465
+3   Sierra Leone     7976985  ...        UTC  2024-09-18 16:04:31.456465
+4        Hungary     9749763  ...  UTC+01:00  2024-09-18 16:04:31.456465
+
+[5 rows x 9 columns]
+[2024-09-18 16:04:52,874] {python.py:175} INFO - Done. Returned value was: None
+[2024-09-18 16:04:52,907] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=Regions_ETL, task_id=cargar_data, execution_date=20240918T160414, start_date=20240918T160440, end_date=20240918T160452
+[2024-09-18 16:04:52,962] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-09-18 16:04:53,115] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
